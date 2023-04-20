@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, './client/build')));
 //   res.sendFile(path.join(__dirname, './client/build/index.html'));
 // });
 var corsOptions = {
-  origin: "https://effulgent-yeot-bd0c2d.netlify.app/"
+  origin: "https://ubique-creations.onrender.com"
 }; // Use this after the variable declaration
 app.use(cors(corsOptions));
 app.use('/', indexRouter);
