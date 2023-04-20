@@ -21,9 +21,12 @@ app.set('view engine', 'jade');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-
+app.use(express.static(path.join(__dirname, './client/build')));
+// app.get('*', function (res, req) {
+//   res.sendFile(path.join(__dirname, './client/build/index.html'));
+// });
 var corsOptions = {
-  origin: "https://ubique-creations.onrender.com/"
+  origin: "https://effulgent-yeot-bd0c2d.netlify.app/"
 }; // Use this after the variable declaration
 app.use(cors(corsOptions));
 app.use('/', indexRouter);
