@@ -22,9 +22,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, './client/build')));
-app.get('*', function (res, req) {
-  res.sendFile(path.join(__dirname, './client/build/index.html'));
-});
+// app.get('*', function (res, req) {
+//   res.sendFile(path.join(__dirname, './client/build/index.html'));
+// });
 var corsOptions = {
   origin: "http://localhost:3000"
 }; // Use this after the variable declaration
